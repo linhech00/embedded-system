@@ -3,7 +3,7 @@
 <title>Static Call Graph - [embedded-system\embedded-system.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image embedded-system\embedded-system.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Mon Feb 21 10:49:35 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Mon Feb 21 11:04:39 2022
 <BR><P>
 <H3>Maximum Stack Usage =        296 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -846,7 +846,6 @@ Global Symbols
 <LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 </UL>
 <BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_FillScreen
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;displayValueScreen
 </UL>
 
 <P><STRONG><a name="[93]"></a>ILI9341_FillScreen</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, lcd.o(i.ILI9341_FillScreen))
@@ -948,7 +947,6 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DisplayIntegerValue
 <LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DisplayAxisValues
 <LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DisplayAxisValue
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startLog
 </UL>
 
 <P><STRONG><a name="[c]"></a>SysTick_Handler</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, stm32f4xx_it.o(i.SysTick_Handler))
@@ -1035,7 +1033,7 @@ Global Symbols
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;processTimerEvents
 </UL>
 
-<P><STRONG><a name="[af]"></a>initAccelTask</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, des.o(i.initAccelTask))
+<P><STRONG><a name="[af]"></a>initAccelTask</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, des.o(i.initAccelTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = initAccelTask &rArr; startTimer
 </UL>
 <BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AccelerometerInit
@@ -1044,7 +1042,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b1]"></a>initGyroTask</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, des.o(i.initGyroTask))
+<P><STRONG><a name="[b1]"></a>initGyroTask</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, des.o(i.initGyroTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = initGyroTask &rArr; startTimer
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startTimer
@@ -1053,7 +1051,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b2]"></a>initLogDataTask</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, des.o(i.initLogDataTask))
+<P><STRONG><a name="[b2]"></a>initLogDataTask</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, des.o(i.initLogDataTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = initLogDataTask &rArr; startTimer
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startTimer
@@ -1062,7 +1060,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[b3]"></a>initScreenTask</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, des.o(i.initScreenTask))
+<P><STRONG><a name="[b3]"></a>initScreenTask</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, des.o(i.initScreenTask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = initScreenTask &rArr; ILI9341_FillScreen &rArr; ILI9341_FillRectangle &rArr; ILI9341_SetAddressWindow &rArr; ILI9341_WriteData &rArr; HAL_SPI_Transmit &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_Init
@@ -1210,16 +1208,15 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startScreen
 </UL>
 
-<P><STRONG><a name="[ad]"></a>displayValueScreen</STRONG> (Thumb, 228 bytes, Stack size 32 bytes, des.o(i.displayValueScreen))
+<P><STRONG><a name="[ad]"></a>displayValueScreen</STRONG> (Thumb, 144 bytes, Stack size 32 bytes, des.o(i.displayValueScreen))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = displayValueScreen &rArr; ILI9341_WriteString &rArr; ILI9341_WriteChar &rArr; ILI9341_SetAddressWindow &rArr; ILI9341_WriteData &rArr; HAL_SPI_Transmit &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_WriteString
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ILI9341_FillRectangle
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startScreen
 </UL>
 
-<P><STRONG><a name="[4a]"></a>startAccel</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, des.o(i.startAccel))
+<P><STRONG><a name="[4a]"></a>startAccel</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, des.o(i.startAccel))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = startAccel &rArr; convertINT &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -1230,7 +1227,7 @@ Local Symbols
 <BR>[Address Reference Count : 2]<UL><LI> des.o(i.startAccel)
 <LI> des.o(i.initAccelTask)
 </UL>
-<P><STRONG><a name="[4b]"></a>startGyro</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, des.o(i.startGyro))
+<P><STRONG><a name="[4b]"></a>startGyro</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, des.o(i.startGyro))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136 + Unknown Stack Size
 <LI>Call Chain = startGyro &rArr; convertINT &rArr; __2sprintf &rArr; _printf_char_common &rArr; __printf
 </UL>
@@ -1241,17 +1238,16 @@ Local Symbols
 <BR>[Address Reference Count : 2]<UL><LI> des.o(i.initGyroTask)
 <LI> des.o(i.startGyro)
 </UL>
-<P><STRONG><a name="[4c]"></a>startLog</STRONG> (Thumb, 38 bytes, Stack size 8 bytes, des.o(i.startLog))
+<P><STRONG><a name="[4c]"></a>startLog</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, des.o(i.startLog))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = startLog &rArr; DisplayAxisValues &rArr; DisplayAxisValue &rArr; DisplayIntegerValue &rArr; IntegerToString
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SendString
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DisplayAxisValues
+<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DisplayAxisValues
 <LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startTimer
 </UL>
 <BR>[Address Reference Count : 2]<UL><LI> des.o(i.initLogDataTask)
 <LI> des.o(i.startLog)
 </UL>
-<P><STRONG><a name="[4d]"></a>startScreen</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, des.o(i.startScreen))
+<P><STRONG><a name="[4d]"></a>startScreen</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, des.o(i.startScreen))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = startScreen &rArr; displayValueScreen &rArr; ILI9341_WriteString &rArr; ILI9341_WriteChar &rArr; ILI9341_SetAddressWindow &rArr; ILI9341_WriteData &rArr; HAL_SPI_Transmit &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;startTimer

@@ -113,10 +113,12 @@ int main(void)
   MX_SPI2_Init();
   
   /* USER CODE BEGIN 2 */
+  
   initGyroTask();
 	initAccelTask();
 	initLogDataTask();
   initScreenTask();
+
 
 	// DisplayHeader();
   

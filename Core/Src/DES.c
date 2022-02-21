@@ -7,10 +7,10 @@
 #include "Gyro.h"
 #include <stdio.h>
 
-#define GYRO_TIME       300
-#define ACCEL_TIME      270
-#define LOG_TIME        300
-#define SCREEN_TIME     300
+#define GYRO_TIME       30
+#define ACCEL_TIME      40
+#define LOG_TIME        100
+#define SCREEN_TIME     100
 
 #define BASE_HORIZONTAL         70
 #define SPACE_HORIZONTAL        120
@@ -80,7 +80,7 @@ static void startLog(void* data)
 {
     startTimer(LOG_TIME, startLog, NULL);
     DisplayAxisValues(&Gyro, &Accele);
-    debug();
+    // debug();
 }
 
 void initScreenTask(void)
@@ -120,23 +120,23 @@ static void displayHeaderScreen(void)
 
 static void displayValueScreen(void)
 {
-    ILI9341_FillRectangle(45, 65, 130, 50, ILI9341_GREEN);
+    // ILI9341_FillRectangle(45, 65, 130, 50, ILI9341_GREEN);
     ILI9341_WriteString(78, 77, (char*)rsBuffer[0], Font_16x26, ILI9341_WHITE, ILI9341_GREEN);
     // ILI9341_FillRectangle(45, 65, 130, 50, ILI9341_PINK);
 
-    ILI9341_FillRectangle(45, 125, 130, 50, ILI9341_GREEN);
+    // ILI9341_FillRectangle(45, 125, 130, 50, ILI9341_GREEN);
     ILI9341_WriteString(78, 137, (char*)rsBuffer[1], Font_16x26, ILI9341_WHITE, ILI9341_GREEN);
 
-    ILI9341_FillRectangle(45, 185, 130, 50, ILI9341_GREEN);
+    // ILI9341_FillRectangle(45, 185, 130, 50, ILI9341_GREEN);
     ILI9341_WriteString(78, 197, (char*)rsBuffer[2], Font_16x26, ILI9341_WHITE, ILI9341_GREEN);
 
-    ILI9341_FillRectangle(185, 65, 130, 50, ILI9341_GREEN);
+    // ILI9341_FillRectangle(185, 65, 130, 50, ILI9341_GREEN);
     ILI9341_WriteString(210, 77, (char*)rsBuffer[3], Font_16x26, ILI9341_WHITE, ILI9341_GREEN);
 
-    ILI9341_FillRectangle(185, 125, 130, 50, ILI9341_GREEN);
+    // ILI9341_FillRectangle(185, 125, 130, 50, ILI9341_GREEN);
     ILI9341_WriteString(210, 137, (char*)rsBuffer[4], Font_16x26, ILI9341_WHITE, ILI9341_GREEN);
 
-    ILI9341_FillRectangle(185, 185, 130, 50, ILI9341_GREEN);
+    // ILI9341_FillRectangle(185, 185, 130, 50, ILI9341_GREEN);
     ILI9341_WriteString(210, 197, (char*)rsBuffer[5], Font_16x26, ILI9341_WHITE, ILI9341_GREEN);
 
     // for(int i = 0; i < 6; i++)
